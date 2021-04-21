@@ -1,4 +1,4 @@
-FROM bathmash/texlive-docker-build:v20.04
+FROM bathmash/texlive-docker-build
 
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 flex \
     make \
@@ -9,6 +9,7 @@ RUN apt-get update --fix-missing && apt-get install -y wget bzip2 flex \
     vim \
     pdf2svg \
     mlocate \
+    tidy \
     && \
     wget https://github.com/jgm/pandoc/releases/download/2.11.3.2/pandoc-2.11.3.2-1-amd64.deb && \
     apt install ./pandoc-2.11.3.2-1-amd64.deb && \
