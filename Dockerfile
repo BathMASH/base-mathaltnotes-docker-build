@@ -1,4 +1,4 @@
-FROM bathmash/texlive-docker-build
+FROM bathmash/texlive-docker-build:v20.04
 
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 flex \
     make \
